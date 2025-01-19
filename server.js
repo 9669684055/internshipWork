@@ -2,8 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const schema = require("./models/schema.js");
-const Schema = require('./models/schema.js');
+const Feedback = require('./models/schema.js');
 
 const MONGO_URL ="mongodb://127.0.0.1:27017/feedback";
  
@@ -22,13 +21,13 @@ app.get("/" , (req, res) => {
 });
 
 app.get("/testSchema" , async (req, res) => {
-    let sampleSchema = new Feedback ({
+    let sampleFeedback = new Feedback ({
      name: " Vivek yadav",
      contact: "9669684055",
      email: "vy7052540@gmail.com",
      feedbackMessage: "This is for test a schema ",
     })
-    await sampleSchema.save();
+    await sampleFeedback.save();
     console.log("sample was saved");
     res.send("successful testing");
 });
