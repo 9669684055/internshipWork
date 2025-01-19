@@ -17,4 +17,6 @@ const FeedbackSchema = new Schema ({
      feedbackMessage :{
         type:String
      }
-})
+});
+
+module.exports=Schema;
