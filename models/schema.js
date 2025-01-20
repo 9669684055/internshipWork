@@ -16,6 +16,10 @@ const FeedbackSchema = new Schema ({
      },
      feedbackMessage :{
         type:String
+     },
+     image: {
+      falename: String,
+      url: String
      }
 });
 

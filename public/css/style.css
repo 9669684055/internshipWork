@@ -1,0 +1,19 @@
+.navbar{
+    background-color: white;
+}
+
+.fa-comment{
+    color: rgb(226, 63, 63); 
+}
+
+.fa-house:hover{
+    color: rgb(226, 63, 63);
+}
+
+.fa-house{
+    margin-left: 0.5rem;
+}
+
+.fa-square-plus:hover{
+    color: rgb(226, 63, 63);
+}
