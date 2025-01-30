@@ -1,0 +1,16 @@
+<%- layout("/layouts/boilerplate.ejs") %>
+
+
+    <div class="row mt-3 ">
+        <div class="col-8 offset-3">
+        <h3><b><%= feedback.name %></b></h3>
+    <div class="card col-6 offset-3 show-card ">
+        <div class="card-body">
+        <p class="card-text"><%= feedback.feedbackMessage %></p>
+        <img src="<%= feedback.image.url %>" class=" card-img-top show-img" alt="feedback_image" />
+       <p class="card-text"> <%= feedback.contact %></p>
+       <p class="card-text"><%= feedback.email %></p>
+    </div>
+    </div>
+    </div>
+</div>

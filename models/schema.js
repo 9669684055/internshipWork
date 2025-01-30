@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 
-const FeedbackSchema = new Schema ({
+const FeedbackSchema = new mongoose.Schema ({
      name: {
         type: String
      },

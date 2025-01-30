@@ -1,3 +1,11 @@
+body {
+    font-family: "Plus Jakarta Sans" , sans-serif !important;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
 .navbar{
     background-color: white;
 }
@@ -16,4 +24,40 @@
 
 .fa-square-plus:hover{
     color: rgb(226, 63, 63);
+}
+
+.feedback-img{
+    align-items: cover !important;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover;
+
+
+}
+
+.show-img{
+    height: 30vh !important;
+   
+}
+
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+  
+}
+
+.card-text{
+    font-weight: 400!important;
+}
+
+.feedback-link{
+    text-decoration: none;
+}
+
+.feedback-card{
+    margin-bottom: 2rem;
+    border: none !important;
 }

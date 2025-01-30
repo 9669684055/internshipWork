@@ -1,0 +1,28 @@
+<% layout("/layouts/boilerplate") %>
+
+
+<h3>Create a New feedback</h3>
+<form method="POST" action="/feedbacks" novalidate class="needs-validation" >
+  <div class="mb-3">
+    <label for="name" class="form-label">Enter your name</label>
+    <input name="feedback[name]" type="text" class="form-control">
+  </div>
+  <div class="md-3">
+    <label for="image" class="form-label">Upload Image</label>
+    <input name ="feedback[image]"  type="file"  class="form-control">
+</div>
+    
+  <div class="mb-3">
+    <label for="contact" class="form-label">Please enter your contact details</label>
+    <input name="feedback[contact]" type="text" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input name="feedback[email]" type="email" class="form-control" placeholder="name@example.com">
+  </div>
+  <div class="mb-3">
+    <label for="feedbackMessage" class="form-label">Write your feedback here</label>
+    <textarea name="feedback[feedbackMessage]" class="form-control" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Add</button>
+</form>
