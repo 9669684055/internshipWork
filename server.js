@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 const Feedback = require('./models/schema.js');
 const path = require('path');
 const ejsMate = require("ejs-mate");
+const flash = require("connect-flash");
+const session = require("express-session");
 
 const MONGO_URL = "mongodb://127.0.0.1:27017/feedback";
 
@@ -23,6 +25,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.engine('ejs', ejsMate);
+app.use(flash());
 
 app.get("/", (req, res) => {
   res.send("Route is working");
@@ -68,6 +71,14 @@ app.get("/feedbacks/:id" , async (req, res) =>{
 }
   const feedback = await Feedback.findById(id);
   res.render("pages/show" , { feedback });
+});
+
+//delete route
+app.post("/feedbacks/:id" , async(req, res) => {
+  let {id} = req.params;
+  const deleteFeedback = await Feedback.findByIdAndDelete(id);
+ console.log(deleteFeedback);
+ res.redirect("/feedbacks");
 });
 
 

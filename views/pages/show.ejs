@@ -12,5 +12,9 @@
        <p class="card-text"><%= feedback.email %></p>
     </div>
     </div>
+    
+    <form method="POST" action="/feedbacks/<%= feedback._id %>?_method=DELETE" >
+        <button class="btn btn-dark  offset-3 mt-2">Delete </button>
+    </form>
     </div>
 </div>
