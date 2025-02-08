@@ -71,6 +71,7 @@ app.post("/feedbacks" , async(req, res) => {
 const newFeedback = new Feedback (req.body.feedback);
 // newFeedback.image = { url, filename};
 await newFeedback.save();
+req.flash("success" , "Feedback is Created");
 res.redirect("/feedbacks");
 
 });
